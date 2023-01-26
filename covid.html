@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>U.S. Electricity Usage Analysis</title>
+		<title>Covid Detection</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -45,12 +45,12 @@
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
-								<img src="images/pic07.jpg" alt="" />
-							</span>
-							<header class="major">
-								<h1><a href="BigData.html" class="link">U.S. Electricity Usage Analysis</a></h1>
-								<p>Big data Analytics done on AWS s3 data using Hadoop, Hive and Tableau.</p>
-							</header>
+                                <img src="images/pic03.jpg" alt="" />
+                            </span>
+                            <header class="major">
+                                <h3><a href="covid.html" class="link">Covid Detection</a></h3>
+                                <p>Medical Image detection with vision transformer</p>
+                            </header>
 
 						</div>
 					</section>
@@ -69,43 +69,45 @@
 							<section id="two" class="spotlights">
 								<section>
 									<a class = "image">
-										<img src="images/diagram.png" style="max-height: 120%;">					
+										<img src="images/LViT.PNG" style="max-height: 120%;">					
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Architecture</h3>
+												<h3>Introduction</h3>
 											</header>
-											<p> The project consists of three sets of data as shown in the figure. Mapreduce is first used to compute average and summation of data. Later on, GISJOIN is used to map the data to the correct county and finally, Tableau is used for data visualization. The dataset is about 30TB in size and only 30GB is used in this project. The dataset can be found <a href="https://data.openei.org/s3_viewer?bucket=oedi-data-lake&prefix=nrel-pds-building-stock%2Fend-use-load-profiles-for-us-building-stock%2F2021%2Fcomstock_amy2018_release_1%2F">here</a>.
+											<p> In this project, a large dataset that contains chest X-rays are analyzed. The dataset can be found <a href="https://www.kaggle.com/datasets/andyczhao/covidx-cxr2?select=train.txt">here</a>. The architecture shown here is used to improve the accuracy of previous work by other researchers. 
 											</p>
 										</div>
 									</div>
 								</section>
 								<section>
 									<a class = "image">
-										<img src="images/Sheet1.png" style="max-height: 120%;">					
+										<img src="images/covid_dataset_example.png" style="max-height: 120%;">					
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Mapreduce Result Sample</h3>
+												<h3>Dataset Sample</h3>
 											</header>
-											<p>Here is a plot of NY resident average electricity usage vs temperature.
+											<p>Here is a sample from the dataset.
 											</p>
 										</div>
 									</div>
 								</section>
 								<section>
 									<a class = "image">
-										<img src="images/dnr.png">
-										<img src="images/solarenergyvalue.png">				
+										<img src="images/saliency_map_for_snapshots.png">			
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Tableau Result Samples</h3>
+												<h3>Results</h3>
 											</header>
-											<p>Here are two plots made in Tableau to visualize the solar resource and solar energy potential in the U.S.. The code repositories for this project can be found <a href="https://github.com/dwang48/Realtime-Big-Data-Analytics">here</a> and the detailed report can be found <a href="https://github.com/dwang48/Realtime-Big-Data-Analytics/blob/main/Analaytics%20of%20Electricity%20Usage%20in%20the%20United%20States.pdf">here</a>.
+											<p>We can evaluate the snapshot models by looking at the
+                                                saliency maps in this figure. The red points highlighted on
+                                                the chest X-ray images are the points with greater gradients
+                                                thus the model puts a focus on during prediction. Our L-Vit model achieved a precision rate of 0.8825 and a recall rate of 0.815. The code repositories for this project can be found <a href="https://github.com/samzhong0702/COVID-X-ray-Benchmarks">here</a>.
 											</p>
 										</div>
 									</div>
